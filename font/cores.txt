@@ -1,0 +1,5 @@
+vermelho = #F74F56
+roxo - #7F5AF0
+bege - #FEE8C7
+azul - #669BEA
+preto - #16161A
