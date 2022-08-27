@@ -71,11 +71,41 @@ body {
     font-family: poppins-light;
 }
 
-.content-home p {
+.description-home {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, .75);
 }
 
-.content-home p span {
+.description-home span {
     color: var(--red);
+}
+
+.typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal,
+    typing 4s steps(40) 1s normal both;
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10.5em;
+    }
 }
