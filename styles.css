@@ -8,16 +8,34 @@
     src: url('./font/Poppins/Poppins-Light.ttf');
 }
 
+@font-face {
+    font-family: poppins-thin;
+    src: url('./font/Poppins/Poppins-ThinItalic.ttf');
+}
+
+@font-face {
+    font-family: jost-thin;
+    src: url('./font/Jost/static/Jost-ThinItalic.ttf');
+}
+
+@font-face {
+    font-family: jost-regular;
+    src: url('font/Jost/static/Jost-Regular.ttf');
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 :root {
     --purple: #663de2;
     --red: #F74F56;
-    --white: #FFFFFF; 
+    --white: #FFFFFF;
+    --black: #16161A; 
 }
 
 /* media 1080 -> 93.75% */
@@ -31,21 +49,19 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 
-    width: 100vw;
-    height: 100vh;
+    width: 98.4vw;
+    height: 100%;
 }
 
 .home {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-
-    font-family: poppins;
 
     position: relative;
 }
 
 .content-home {
-    top: 40%;
+    top: 35%;
     left: 70%;
     transform: translate(-50%, -50%);
 
@@ -61,31 +77,87 @@ body {
 
 .content-home h1 {
     color: var(--purple);
-    font-size: 3.5rem;
-    font-family: poppins-light;
+    font-size: 5rem;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .content-home h2 {
     color: var(--white);
-    font-size: 3rem;
-    font-family: poppins-light;
+    font-size: 3.5rem;
+    font-style: italic;
 }
 
 .description-home {
     color: var(--white);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: lowercase;
     white-space: nowrap;
-    overflow: hidden;
     text-align: center;
 
+    overflow: hidden;
+
     border-right: 1px solid rgba(255, 255, 255, .75);
+}
+
+.description-about-me {
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+
+    margin-top: 1rem;
+
 }
 
 .description-home span {
     color: var(--red);
 }
+
+.about {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-about {
+    width: 90%;
+    height: 80%;
+
+    font-size: 2rem;
+    color: white;
+
+    background-color: var(--black);
+    border-radius: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.content-about h2 {
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+.content-about .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+.content-about .skills img {
+    width: 100px;
+}
+
+
 
 .typing-animation {
     animation: blinkCursor 500ms steps(40) infinite normal,
@@ -106,6 +178,6 @@ body {
         width: 0;
     }
     to {
-        width: 10.5em;
+        width: 11.5em;
     }
 }
