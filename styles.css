@@ -36,6 +36,7 @@
     --red: #F74F56;
     --white: #FFFFFF;
     --black: #16161A; 
+    --blue: #2796ee;
 }
 
 /* media 1080 -> 93.75% */
@@ -135,13 +136,83 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
 }
 
 .content-about h2 {
     text-transform: uppercase;
-    color: var(--red);
+    color: var(--white);
+    font-size: 4rem;
+}
+
+#range {
+    -webkit-appearance: none;
+    background: var(--purple);
+    width: 15%;
+    outline: none;
+    height: 10px;
+    border-radius: 9px;   
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+
+    background: var(--purple);
+    filter: brightness(0.9);
+}
+
+#range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+
+    background: #2796ee;
+    cursor: pointer;
+}
+
+.border-circle-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    
+    width: 200px;
+    height: 200px;
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, var(--purple), purple);
+    padding: 20px;
+    border-radius: 50%;
+
+    box-shadow: var(--purple) 1px 1px 8px;
+    animation: moveBorder 1000ms infinite alternate-reverse;
+}
+
+.circle-info {
+    background-color: var(--black);
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.circle-info p {
+    margin-top: 5px;
+    animation: movePosition ease-in-out 300ms infinite alternate-reverse;
 }
 
 .content-about .skills {
@@ -150,13 +221,14 @@ body {
     justify-content: center;
 
     width: 100%;
-
+    height: 30%;
+    gap: 1rem;
 }
 
 .content-about .skills img {
-    width: 100px;
+    width: 7rem;
+    cursor: pointer;
 }
-
 
 
 .typing-animation {
@@ -179,5 +251,23 @@ body {
     }
     to {
         width: 11.5em;
+    }
+}
+
+@keyframes moveBorder {
+    to {
+        box-shadow: var(--purple) 0px 0px 8px;
+    }
+    from {
+        box-shadow: var(--purple) 1.5px 1.5px 8px;
+    }
+}
+
+@keyframes movePosition {
+    from {
+        margin-top: -3px;
+    }
+    to {
+        margin-top: 3px;
     }
 }
