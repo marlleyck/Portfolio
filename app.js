@@ -65,6 +65,7 @@ const paragCosts = document.getElementById('paragCosts')
 const paragGallery = document.getElementById('paragGallery')
 
 const parag = document.querySelectorAll('.parag')
+const links = document.querySelectorAll('.link')
 
 
 mario.addEventListener('mouseenter', () => {
@@ -92,6 +93,7 @@ gallery.addEventListener('mouseenter', () => {
 })
 
 card.forEach((item) => {
+
     item.addEventListener('mouseleave', (e) => {
         parag.forEach((paragItem) => {
             paragItem.style.display = 'none'
@@ -99,11 +101,16 @@ card.forEach((item) => {
 
         const child = e.target.children[0]
         child.classList.remove('card-hover')
+
+        const link = item.children[0].children[0]
+        link.classList.remove('animationA')
     })
 
     item.addEventListener('mouseenter', (e) => {
         const child = e.target.children[0]
         child.classList.add('card-hover')
-    })
 
+        const link = item.children[0].children[0]
+        link.classList.add('animationA')
+    })
 })
