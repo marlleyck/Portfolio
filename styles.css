@@ -1,29 +1,3 @@
-@font-face {
-    font-family: poppins-regular;
-    src: url('./font/Poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: poppins-light;
-    src: url('./font/Poppins/Poppins-Light.ttf');
-}
-
-@font-face {
-    font-family: poppins-thin;
-    src: url('./font/Poppins/Poppins-ThinItalic.ttf');
-}
-
-@font-face {
-    font-family: jost-thin;
-    src: url('./font/Jost/static/Jost-ThinItalic.ttf');
-}
-
-@font-face {
-    font-family: jost-regular;
-    src: url('font/Jost/static/Jost-Regular.ttf');
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -141,9 +115,9 @@ body {
 }
 
 .content-about h2 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: var(--white);
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .border-circle-info {
@@ -231,8 +205,8 @@ body {
 
 .content-projects h2 {
     color: white;
-    text-transform: uppercase;
-    font-size: 4rem;
+    text-transform: capitalize;
+    font-size: 3.8rem;
 }
 
 .content-cards-projects {
