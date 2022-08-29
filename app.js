@@ -44,3 +44,57 @@ react.addEventListener('mouseenter', () => {
 })
 
 skills.addEventListener('mouseleave', noneShow) 
+
+// =========================================================
+
+const mario = document.getElementById('mario')
+const financ = document.getElementById('financ')
+const weather = document.getElementById('weather')
+const todo = document.getElementById('todo')
+const costs = document.getElementById('costs')
+const gallery = document.getElementById('gallery')
+
+const card = document.querySelectorAll('.card')
+
+const paragMario = document.getElementById('paragMario')
+const paragFinanc = document.getElementById('paragFinanc')
+const paragWeather = document.getElementById('paragWeather')
+const paragTodo = document.getElementById('paragTodo')
+const paragCosts = document.getElementById('paragCosts')
+const paragGallery = document.getElementById('paragGallery')
+
+const parag = document.querySelectorAll('.parag')
+
+
+mario.addEventListener('mouseenter', () => {
+    paragMario.style.display = 'block'
+})
+
+financ.addEventListener('mouseenter', () => {
+    paragFinanc.style.display = 'block'
+})
+
+weather.addEventListener('mouseenter', () => {
+    paragWeather.style.display = 'block'
+})
+
+todo.addEventListener('mouseenter', () => {
+    paragTodo.style.display = 'block'
+})
+
+costs.addEventListener('mouseenter', () => {
+    paragCosts.style.display = 'block'
+})
+
+gallery.addEventListener('mouseenter', () => {
+    paragGallery.style.display = 'block'
+})
+
+card.forEach((item) => {
+    item.addEventListener('mouseleave', () => {
+        parag.forEach((paragItem) => {
+            paragItem.style.display = 'none'
+        })
+    })
+})
+
