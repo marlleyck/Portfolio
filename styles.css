@@ -131,7 +131,7 @@ body {
     font-size: 2rem;
     color: white;
 
-    background-color: var(--black);
+    background-color: black;
     border-radius: 4rem;
 
     display: flex;
@@ -144,6 +144,10 @@ body {
     text-transform: uppercase;
     color: var(--white);
     font-size: 4rem;
+
+    background: -webkit-linear-gradient(95deg, var(--purple), var(--red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .border-circle-info {
@@ -167,7 +171,7 @@ body {
 }
 
 .circle-info {
-    background-color: var(--black);
+    background-color: black;
     font-size: 4rem;
     color: var(--white);
     font-weight: bold;
@@ -184,6 +188,11 @@ body {
 .circle-info p {
     margin-top: 5px;
     animation: movePosition ease-in-out 300ms infinite alternate-reverse;
+}
+
+#espec {
+    opacity: 0.2;
+    font-size: 1.5rem;
 }
 
 .content-about .skills {
@@ -225,9 +234,13 @@ body {
 }
 
 .content-projects h2 {
-    color: var(--purple);
+    background: -webkit-linear-gradient(95deg, var(--purple), var(--red));
+    color: white;
     text-transform: uppercase;
     font-size: 4rem;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .content-cards-projects {
@@ -294,6 +307,27 @@ body {
 
     background-image: linear-gradient(95deg, rgba(102, 61, 226, 0.7) 10%, rgba(128, 0, 128, 0.7) 90%);
     z-index: 2;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.content-footer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content-footer svg {
+    width: 30px;
+    cursor: pointer;
 }
 
 .typing-animation {
