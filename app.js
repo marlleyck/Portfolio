@@ -55,6 +55,7 @@ const costs = document.getElementById('costs')
 const gallery = document.getElementById('gallery')
 
 const card = document.querySelectorAll('.card')
+const cardHover = document.querySelectorAll('.card-hover')
 
 const paragMario = document.getElementById('paragMario')
 const paragFinanc = document.getElementById('paragFinanc')
@@ -91,10 +92,18 @@ gallery.addEventListener('mouseenter', () => {
 })
 
 card.forEach((item) => {
-    item.addEventListener('mouseleave', () => {
+    item.addEventListener('mouseleave', (e) => {
         parag.forEach((paragItem) => {
             paragItem.style.display = 'none'
         })
-    })
-})
 
+        const child = e.target.children[0]
+        child.classList.remove('card-hover')
+    })
+
+    item.addEventListener('mouseenter', (e) => {
+        const child = e.target.children[0]
+        child.classList.add('card-hover')
+    })
+
+})

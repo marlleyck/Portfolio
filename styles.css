@@ -262,7 +262,7 @@ body {
 .content-cards-projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .card {
@@ -279,12 +279,12 @@ body {
 }
 
 .card p {
-    color: var(--black);
-    z-index: 2;
+    color: var(--white);
     font-size: 2rem;
     display: none;
     user-select: none;
     cursor: pointer;
+    z-index: 3;
 }
 
 .card img {
@@ -303,6 +303,19 @@ body {
 
 .card:hover img {
     filter: blur(0.20rem);
+}
+
+.card-hover {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(95deg, rgba(102, 61, 226, 0.8) 10%, rgba(128, 0, 128, 0.8) 90%);
+    z-index: 2;
+    cursor: pointer;
 }
 
 .typing-animation {
